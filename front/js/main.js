@@ -1,4 +1,3 @@
-
 const cosmic = document.querySelector(".cosmic");
 const button = document.querySelector(".cosmic__how-btn-icon");
 const close = document.querySelector(".popup__window-close");
@@ -24,15 +23,18 @@ let prizesLeftArrow = document.querySelector('.controls-left'),
 var slider1 = slider(
     'prizes-slider',
     '.cosmic__prizes-slider-item',
-    prizesLeftArrow, prizesRightArrow);
+    prizesLeftArrow, prizesRightArrow, true);
 
-function slider(id, itemSelector, leftArrow, rightArrow, config) {
+function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
+    const AUTOPLAY_INTERVAL = 5000;
+
     var el = document.getElementById(id);
     el.classList.add('slider')
     var mediaStep = '';
     var activeIndIndex = 0;
     var toogleIndex = 0;
     var items = el.querySelectorAll(itemSelector);
+    var timerId;
 
     function getMediaStep() {
         var width = window.innerWidth;
@@ -126,6 +128,10 @@ function slider(id, itemSelector, leftArrow, rightArrow, config) {
             window.addEventListener('mouseup', onMouseEnd);
             window.addEventListener('touchend', onMouseEnd);
 
+            if (autoplay) {
+                timerId = setInterval(() => toggleIndex((activeIndIndex + 1) % indicators.length), AUTOPLAY_INTERVAL);
+            }
+
             return obj
         },
         config: {
@@ -179,6 +185,9 @@ function slider(id, itemSelector, leftArrow, rightArrow, config) {
             var wrapper = el.querySelector('.slider-wrapper');
             el.classList.remove('not-enough-elems')
             wrapper && wrapper.remove();
+            if (timerId) {
+                clearInterval(timerId);
+            }
         },
         toggle: toggleIndex
     }
