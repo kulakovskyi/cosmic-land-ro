@@ -18,9 +18,7 @@
   .cosmic
     &__main
       &-info
-        top: 80px
-      &-number
-        top: 80px
+        top: 75px
       &-planet
         width: 750px
         height: 750px
@@ -54,6 +52,9 @@
     &__window
       transform: scale(0.8)
   .cosmic
+    &__logo
+      transform: scale(0.9)
+      transform-origin: top left
     &__main
       .container
         padding: 123px 0 34px
@@ -78,14 +79,15 @@
 @media screen and (max-width: 1368px)
   .cosmic
     padding-bottom: 130px
+    &__logo
+      transform: scale(0.7)
+      transform-origin: top left
     &:before
       width: 22vw
     &__btn
       padding: 26px 74px 24px
     &__main
-      &-number
-        transform: scale(0.9)
-        transform-origin: top left
+
       &-info
         transform: scale(0.7)
       .container
@@ -130,20 +132,23 @@
       &-btn
         bottom: 50px
     &__pay
-      width: 310px
+      width: 300px
+      height: 77px
 
 @media screen and (max-width: 1280px)
   .popup
     &__window
       transform: scale(0.7)
   .cosmic
+    &__logo
+      transform: scale(0.6)
+      transform-origin: top left
     &__main
       .container
         background-position-x: 1px
         &:before
           background: linear-gradient(180deg, rgba(0, 0, 85, 0) 37%, rgba(0, 0, 85, 0.74) 100%)
-      &-number
-        transform: scale(0.8)
+
         //top: 30px
       &-info
         transform: scale(0.6)
@@ -220,20 +225,20 @@
     &:before
       display: none
     &__logo
-      max-width: 205px
-      top: 30px
+      top: 0
+      transform: scale(1)
+      max-width: 233px
     &__main
       padding: 0
       .container
         padding: 120px 0 100px
         &:before
           background: linear-gradient(180deg, rgba(0, 0, 85, 0) 55%, rgba(0, 0, 85, 0.74) 100%)
-      &-number
-        //top: 50px
-        left: 60px
+
       &-info
-        //top: 50px
-        right: 60px
+        top: 50px
+        right: 55px
+        transform: scale(0.8)
       &-welcome
         transform: translateX(0)
         flex-direction: column
@@ -299,7 +304,8 @@
             top: 57px
             right: 215px
     &__pay
-      width: 310px
+      width: 350px
+      height: 90px
 
 @media screen and (max-width: 920px) and (orientation: portrait)
   .cosmic
@@ -342,9 +348,7 @@
 @media screen and (max-width: 768px) and (orientation: portrait)
   .cosmic
     &__main
-      &-number
-        //top: 30px
-        left: 40px
+
       &-info
         //top: 30px
         right: 40px
@@ -396,8 +400,8 @@
   .cosmic
     padding-bottom: 103px
     &__logo
-      top: 20px
-      max-width: 160px
+      top: -51px
+      max-width: 190px
     &__main
       padding-top: 50px
       .container
@@ -407,17 +411,9 @@
         &:before
           height: 600px
           left: 0
-      &-number
-        top: 28px
-        left: 17px
-        transform: scale(1)
-        &-item
-          &:nth-child(1)
-            &:after
-              width: 25px
-          &:nth-child(2)
-            margin-left: 55px
+
       &-info
+        display: none
         right: 17px
         transform: scale(0.82)
         top: 25px
@@ -487,19 +483,9 @@
       &-btn
         bottom: -63px
     &__pay
-      flex-wrap: wrap
-      justify-content: center
-      img
-        margin: 0 0 10px 0
-        max-width: 44px
-      img:first-child
-        margin: 0 15px 10px 0
-      &-text
-        br
-          display: none
-          font-size: 12px
-          line-height: 16px
-
+      width: 200px
+      height: 52px
+      margin: 44px auto 0
 
 @media screen and (max-width: 375px) and (orientation: portrait)
   .popup
@@ -531,8 +517,7 @@
           line-height: 24px
   .cosmic
     &__main
-      &-number
-        transform: scale(0.8)
+
       &-info
         transform: scale(0.7)
       &-welcome
@@ -649,7 +634,8 @@
         bottom: 20px
         transform: scale(0.8)
     &__pay
-      width: 310px
+      width: 240px
+      height: 61px
       margin: 40px auto 0
 
 @media screen and (max-width: 750px) and (orientation: landscape) and (max-height: 450px)
@@ -661,9 +647,7 @@
       &-info
         transform: scale(0.5)
         top: 20px
-      &-number
-        transform: scale(0.7)
-        top: 20px
+
       &-planet
         width: 380px
         height: 380px

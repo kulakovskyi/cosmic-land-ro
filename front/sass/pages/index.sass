@@ -31,10 +31,9 @@ body
   overflow-x: hidden
   &__logo
     position: absolute
-    max-width: 273px
-    top: 46px
-    left: 50%
-    transform: translateX(-50%)
+    max-width: 271px
+    top: 75px
+    left: 0
     z-index: 4
 
   @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
@@ -111,33 +110,10 @@ body
         width: 200%
         height: 900px
         z-index: 2
-    &-number
-      display: flex
-      position: absolute
-      top: 137px
-      left: 0
-      z-index: 1
-      &-item
-        font-size: 16px
-        line-height: 16px
-        font-family: $font-suisse-reg
-        &:nth-child(1)
-          color: $magenta
-          position: relative
-          &:after
-            content: ""
-            background: $white
-            width: 51px
-            height: 1px
-            position: absolute
-            top: 8px
-            left: 31px
-        &:nth-child(2)
-          color: $white
-          margin-left: 80px
+
     &-info
       position: absolute
-      top: 143px
+      top: 75px
       right: 0
       display: flex
       flex-direction: column
@@ -423,21 +399,10 @@ body
         position: absolute
         top: 24px
   &__pay
-    width: 310px
+    background: url("../img/pay.svg") no-repeat 0 0/contain
+    width: 380px
+    height: 96px
     margin: 61px auto 0
-    display: flex
-    align-items: center
-    justify-content: space-between
-    &-text
-      font-family: $font-suisse-reg
-      font-size: 14px
-      line-height: 18px
-      letter-spacing: 0.02em
-      color: #E8E8E8
-      text-align: start
-
-
-
   &__footer
     width: 100%
     height: 126px
