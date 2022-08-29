@@ -29,6 +29,14 @@ body
   position: relative
   padding-bottom: 180px
   overflow-x: hidden
+  &__logo
+    position: absolute
+    max-width: 273px
+    top: 46px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 4
+
   @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
     background: url("../img/bg.jpg") repeat-y 50% 0/contain
   @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
@@ -63,8 +71,8 @@ body
     &:hover
       background: $green-hover
   &__main
-    border-bottom: 1px solid rgba(255,255,255,.12)
     position: relative
+    z-index: 3
     &:after
       content: ""
       width: 100%
@@ -91,7 +99,7 @@ body
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
       background-size: 24.95%
       background-position-x: 2px
-      padding: 73px 0 34px
+      padding: 123px 0 34px
       z-index: 1
       &:before
         content: ""
@@ -106,7 +114,7 @@ body
     &-number
       display: flex
       position: absolute
-      top: 87px
+      top: 137px
       left: 0
       z-index: 1
       &-item
@@ -129,7 +137,7 @@ body
           margin-left: 80px
     &-info
       position: absolute
-      top: 93px
+      top: 143px
       right: 0
       display: flex
       flex-direction: column
@@ -187,7 +195,7 @@ body
       width: 100%
       height: 800px
       position: absolute
-      top: 28px
+      top: 78px
       left: 0
       right: 0
       margin: auto
@@ -203,7 +211,7 @@ body
       width: 859px
       height: 859px
       position: absolute
-      top: 169px
+      top: 219px
       left: 0
       right: 0
       margin: auto
@@ -213,33 +221,6 @@ body
         background: url("../img/main-planet-mob.png") no-repeat 50% 0/contain
       @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
         background: url("../img/main-planet-mob.png") no-repeat 50% 0/contain
-    &-icon
-      width: 49px
-      height: 49px
-      border-radius: 50%
-      border: 1px solid rgba(255,255,255,.13)
-      position: absolute
-      bottom: -25px
-      left: 2px
-      right: 0
-      margin: auto
-      display: flex
-      justify-content: center
-      align-items: center
-      z-index: 2
-      &:before
-        content: ""
-        background: $magenta
-        width: 5px
-        height: 5px
-        border-radius: 50%
-      &:after
-        content: ""
-        background: $magenta
-        width: 1px
-        height: 53px
-        position: absolute
-        top: 24px
   &__prizes
     margin-top: -64px
     position: relative
@@ -329,9 +310,12 @@ body
           &:before
             transform: scale(1)
   &__how
+    z-index: 3
+    top: -1px
     padding-top: 152px
     position: relative
     margin-bottom: 88px
+    border-top: 1px solid rgba(255,255,255,.12)
     background: linear-gradient(0deg, rgba(0, 0, 85, 0) 22.05%, rgba(0, 0, 85, 0.74) 100%)
     &-title
       font-family: $font-suisse-reg
@@ -411,6 +395,33 @@ body
         text-transform: uppercase
         letter-spacing: 0.22em
         margin-left: 5px
+    &-icon
+      width: 49px
+      height: 49px
+      border-radius: 50%
+      border: 1px solid rgba(255,255,255,.13)
+      position: absolute
+      top: -25px
+      left: 2px
+      right: 0
+      margin: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      z-index: 2
+      &:before
+        content: ""
+        background: $magenta
+        width: 5px
+        height: 5px
+        border-radius: 50%
+      &:after
+        content: ""
+        background: $magenta
+        width: 1px
+        height: 53px
+        position: absolute
+        top: 24px
   &__pay
     background: url("../img/pay.svg") no-repeat 0 0/contain
     width: 380px
