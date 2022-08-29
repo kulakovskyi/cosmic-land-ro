@@ -131,9 +131,7 @@
         transform: scale(0.85)
       &-btn
         bottom: 50px
-    &__pay
-      width: 300px
-      height: 77px
+
 
 @media screen and (max-width: 1280px)
   .popup
@@ -303,9 +301,7 @@
           &:nth-child(3)
             top: 57px
             right: 215px
-    &__pay
-      width: 350px
-      height: 90px
+
 
 @media screen and (max-width: 920px) and (orientation: portrait)
   .cosmic
@@ -484,8 +480,21 @@
         bottom: -63px
     &__pay
       width: 200px
-      height: 52px
+      flex-wrap: wrap
+      justify-content: center
       margin: 44px auto 0
+      img
+        max-width: 44px
+        margin: 0 0 16px 0
+        &:first-child
+          margin: 0 11px 16px 0
+
+      &-text
+        font-size: 12px
+        line-height: 16px
+        br
+          display: none
+
 
 @media screen and (max-width: 375px) and (orientation: portrait)
   .popup
